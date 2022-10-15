@@ -9,17 +9,11 @@ jobs:
     env:
       target_repo: nasm-win64-boilerplate
     steps:
-#       - uses: actions/checkout@v3
-#         with:
-#           repository: dirkarnez/${{ env.target_repo }}
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           path: ${{ env.target_repo }}
-          
       - shell: cmd
         run: | 
           git config --global user.name "dirkarnez" &&^
           git config --global user.email "smalldirkalex@gmail.com" &&^
-          git clone --recursive https://dirkarnez:${{ secrets.GITHUB_TOKEN }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
+          git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
           git push --delete origin v1.0.0test3 &&^
