@@ -17,7 +17,7 @@ jobs:
           path: ${{ env.target_repo }}
           
       - run: | 
-        cd ${{ env.target_repo }} &&^
-        git push --delete origin v1.0.0test3 &&^
-        git push --delete origin v1.0.0test2 &&^
-        git push --delete origin v1.0.0test
+          cd /d "${{ env.target_repo }}" &&^ 
+          git push --delete origin v1.0.0test3 &&^
+          git push --delete origin v1.0.0test2 &&^
+          git push --delete origin v1.0.0test
