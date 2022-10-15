@@ -1,0 +1,25 @@
+    name: cpp-cmake-mingw-prebuilt-release-actions-workflow
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+      - 'c*'
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: windows-latest
+    steps:
+      - name: Checkout tools repo
+        uses: actions/checkout@v3
+        with:
+          repository: dirkarnez/${{ env.target_repo }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: ${{ env.target_repo }}
+          
+      - run: | 
+        cd ${{ env.target_repo }} &&^
+        git push --delete origin v1.0.0test3 &&^
+        git push --delete origin v1.0.0test2 &&^
+        git push --delete origin v1.0.0test
