@@ -17,6 +17,8 @@ jobs:
           
       - shell: cmd
         run: | 
+          git config --global user.name "dirkarnez" &&^
+          git config --global user.email "smalldirkalex@gmail.com" &&^
           git clone --recursive https://dirkarnez:${{ secrets.GITHUB_TOKEN }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
