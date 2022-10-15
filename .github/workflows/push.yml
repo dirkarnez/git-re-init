@@ -17,7 +17,8 @@ jobs:
           
       - shell: cmd
         run: | 
-          cd "${{ env.target_repo }}" &&^ 
+          cd "${{ env.target_repo }}" &&^
+          dir &&^
           git push --delete origin v1.0.0test3 &&^
           git push --delete origin v1.0.0test2 &&^
           git push --delete origin v1.0.0test
