@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: poco-prebuilt
+      target_repo: mpc-prebuilt
     steps:
       - shell: cmd
         run: | 
@@ -16,8 +16,9 @@ jobs:
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
-          git push --delete origin v1.12.2test &&^
-          git push --delete origin v1.12.2test1 &&^
-          git push --delete origin v1.12.2test2 &&^
-          git push --delete origin v1.12.2test3 &&^
-          git push --delete origin v1.12.2test4
+          git push --delete origin v1.2.1test &&^
+          git push --delete origin v1.2.1test2 &&^
+          git push --delete origin v1.2.1test3 &&^
+          git push --delete origin v1.2.1test4 &&^
+          git push --delete origin v1.2.1test5 &&^
+          git push --delete origin v1.2.1test6
