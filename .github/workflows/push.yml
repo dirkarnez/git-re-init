@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: boost-prebuilt
+      target_repo: internal-inhouse-system
     steps:
       - shell: cmd
         run: | 
@@ -16,9 +16,5 @@ jobs:
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
-          git push --delete origin v1.80.0test &&^
-          git push --delete origin v1.80.0test2 &&^
-          git push --delete origin v1.80.0test3 &&^
-          git push --delete origin v1.80.0test4 &&^
-          git push --delete origin v1.80.0test5
+          git push --delete origin v0.0.1
           
