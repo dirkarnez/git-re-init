@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: mp4v2-prebuilt
+      target_repo: baidunetdisk-portable
     steps:
       - shell: cmd
         run: | 
@@ -16,4 +16,4 @@ jobs:
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
-          git push --delete origin v2.1.1
+          git push --delete origin v7.20.2.2
