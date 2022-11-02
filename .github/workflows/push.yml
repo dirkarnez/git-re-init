@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: VTK-prebuilt
+      target_repo: bazel-msys2-mingw64
     steps:
       - shell: cmd
         run: | 
@@ -16,6 +16,7 @@ jobs:
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
-          git push --delete origin v9.2.2test &&^
-          git push --delete origin v9.2.2test2 &&^
-          git push --delete origin v9.2.2test3
+          git push --delete origin v5.3.2 &&^
+          git push --delete origin vtest &&^
+          git push --delete origin vtest2 &&^
+          git push --delete origin vtes2
