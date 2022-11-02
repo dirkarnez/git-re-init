@@ -17,6 +17,4 @@ jobs:
           cd "${{ env.target_repo }}" &&^
           dir &&^
           git push --delete origin v5.3.2 &&^
-          git push --delete origin vtest &&^
-          git push --delete origin vtest2 &&^
-          git push --delete origin vtes2
+          git push --delete origin vtest
