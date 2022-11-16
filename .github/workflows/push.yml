@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: lame-prebuilt
+      target_repo: WinReg-prebuilt
     steps:
       - shell: cmd
         run: | 
@@ -16,22 +16,8 @@ jobs:
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
-          git push --delete origin v3.100test18 &&^
-          git push --delete origin v3.100test17 &&^
-          git push --delete origin v3.100test16 &&^
-          git push --delete origin v3.100test15 &&^
-          git push --delete origin v3.100test14 &&^
-          git push --delete origin v3.100test13 &&^
-          git push --delete origin v3.100test12 &&^
-          git push --delete origin v3.100test11 &&^
-          git push --delete origin v3.100test10 &&^
-          git push --delete origin v3.100test9 &&^
-          git push --delete origin v3.100test8 &&^
-          git push --delete origin v3.100test7 &&^
-          git push --delete origin v3.100test6 &&^
-          git push --delete origin v3.100test5 &&^
-          git push --delete origin v3.100test4 &&^
-          git push --delete origin v3.100test3 &&^
-          git push --delete origin v3.100test2 &&^
-          git push --delete origin v3.100test
-          
+          git push --delete origin v6.1.0 &&^
+          git push --delete origin v6.1.0-test1 &&^
+          git push --delete origin v6.1.0-test2 &&^
+          git push --delete origin v6.1.0-test3 &&^
+          git push --delete origin v6.1.0-test4
