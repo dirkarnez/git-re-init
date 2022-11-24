@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: SKIRT9
+      target_repo: sbcl-portable
     steps:
       - shell: cmd
         run: | 
@@ -16,4 +16,4 @@ jobs:
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
           dir &&^
-          git push --delete origin c75c3b8e7bafef6eb9d5c1feea3738be25ba1910b
+          git push --delete origin v2.1.11
