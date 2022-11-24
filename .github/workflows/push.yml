@@ -17,7 +17,7 @@ jobs:
           cd "${{ env.target_repo }}" &&^
           dir &&^
           git push --delete origin v1.65.0 &&^
-          git push --delete origin v1.65.0test1 &&^
+          git push --delete origin v1.65.0test &&^
           git push --delete origin v1.65.0test2 &&^
           git push --delete origin v1.65.0test3 &&^
           git push --delete origin v1.65.0test4 &&^
