@@ -15,4 +15,4 @@ jobs:
           git config --global user.email "smalldirkalex@gmail.com" &&^
           git clone --recursive https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
           cd "${{ env.target_repo }}" &&^
-          git push --delete origin c2fc6562d71665312c6298f7c340bace1bcf1b7a1
+          git push --delete origin ceb5cccae0d35d4252f117a634ffed4a8f03e5801
