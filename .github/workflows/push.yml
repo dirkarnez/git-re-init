@@ -18,5 +18,5 @@ jobs:
           git push --delete origin c28a209255f277e7e1e73c4431faca8e92f394fb3 &&^
           git push --delete origin ctest2 &&^
           git push --delete origin ctest1 &&^
-          git push --delete origin ctest &&^
+          git push --delete origin ctest
           
