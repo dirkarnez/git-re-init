@@ -11,13 +11,13 @@ jobs:
     steps:
       - shell: cmd
         run: | 
-          git config --global user.name "dirkarnez" &&^
-          git config --global user.email "smalldirkalex@gmail.com" &&^
-          git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
-          cd "${{ env.target_repo }}" &&^
+          git config --global user.name "dirkarnez" && ^
+          git config --global user.email "smalldirkalex@gmail.com" && ^
+          git clone https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git && ^
+          cd "${{ env.target_repo }}" && ^
           rmdir /s /q .git && ^
           git init && ^
-          git remote add origin https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git &&^
+          git remote add origin https://dirkarnez:${{ secrets.GH_PAT }}@github.com/dirkarnez/${{ env.target_repo }}.git && ^
           git add * && ^
           git commit -m "- init" && ^
           git branch -M main && ^
