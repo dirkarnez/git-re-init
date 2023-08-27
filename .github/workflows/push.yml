@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: ledger-prebuilt
+      target_repo: cpp-httplib-prebuilt
     steps:
       - shell: cmd
         run: | 
