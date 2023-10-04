@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: cuda-samples-prebuilt
+      target_repo: serial-prebuilt
     steps:
       - shell: cmd
         run: | 
