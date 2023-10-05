@@ -1,7 +1,7 @@
-name: cpp-cmake-mingw-prebuilt-release-actions-workflow
+name: release-actions-workflow
 on:
   push
-
+  
 jobs:
   build:
     name: Create Release
