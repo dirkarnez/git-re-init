@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: texlive-portable
+      target_repo: igstories-action
     steps:
       - shell: cmd
         run: | 
