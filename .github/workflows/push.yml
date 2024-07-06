@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: igstories-action
+      target_repo: dirkarnez.github.io
     steps:
       - shell: cmd
         run: | 
