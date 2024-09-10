@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: levenshtein-c
+      target_repo: tree-prebuilt
     steps:
       - shell: cmd
         run: | 
