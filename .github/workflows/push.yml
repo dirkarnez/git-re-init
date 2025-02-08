@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: squareline-studio-portable
+      target_repo: EIE3105_Project
     steps:
       - shell: cmd
         run: | 
