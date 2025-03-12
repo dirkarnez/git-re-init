@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: EIE3105_Project
+      target_repo: dirkarnez.github.io
     steps:
       - shell: cmd
         run: | 
