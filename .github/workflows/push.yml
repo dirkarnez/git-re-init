@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: kotlin-text-generator
+      target_repo: gnu-radio-msys2-prebuilt
     steps:
       - shell: cmd
         run: | 
