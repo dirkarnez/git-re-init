@@ -7,7 +7,7 @@ jobs:
     name: Create Release
     runs-on: windows-latest
     env:
-      target_repo: semantic-kernel-python-playground
+      target_repo: sharedown-portable
     steps:
       - shell: cmd
         run: | 
