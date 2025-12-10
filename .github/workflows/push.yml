@@ -17,7 +17,7 @@ jobs:
         os: [ "ubuntu-latest" ] # , "windows-latest"
     runs-on: ${{ matrix.os }}
     env:
-      target_repo: solidrun-imx6-u-boot-prebuilt
+      target_repo: ""
     steps:
       - shell: cmd
         if: ${{ matrix.os == 'windows-latest' }}
@@ -34,6 +34,7 @@ jobs:
           git branch -M main && ^
           git push --force -u origin main
 
+# files under .github/workflows/ may be gone
       - shell: bash
         if: ${{ matrix.os == 'ubuntu-latest' }}
         run: | 
