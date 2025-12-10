@@ -20,7 +20,7 @@ jobs:
       target_repo: solidrun-imx6-u-boot-prebuilt
     steps:
       - shell: cmd
-        if: ${{ matrix.os == "windows-latest" }}
+        if: ${{ matrix.os == 'windows-latest' }}
         run: | 
           git config --global user.name "dirkarnez" && ^
           git config --global user.email "smalldirkalex@gmail.com" && ^
@@ -35,7 +35,7 @@ jobs:
           git push --force -u origin main
 
       - shell: bash
-        if: ${{ matrix.os == "ubuntu-latest" }}
+        if: ${{ matrix.os == 'ubuntu-latest' }}
         run: | 
           git config --global user.name "dirkarnez" && \
           git config --global user.email "smalldirkalex@gmail.com" && \
